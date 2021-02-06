@@ -112,6 +112,9 @@ if STATIC_LINKING:
 
         extra_link_args += ['-lasound', '-ljack']
 
+    elif sys.platform == 'android':
+        extra_link_args += ['-lm']
+
 
 pyaudio = Extension('_portaudio',
                     sources=pyaudio_module_sources,

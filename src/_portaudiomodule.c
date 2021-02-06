@@ -25,7 +25,7 @@
  */
 
 #include <stdio.h>
-#undefine HAVE_CRYPT_H
+#undef HAVE_CRYPT_H
 #include "Python.h"
 #include "portaudio.h"
 #include "_portaudiomodule.h"

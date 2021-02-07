@@ -54,7 +54,6 @@ if "--static-link" in sys.argv:
 
 portaudio_path = os.environ.get("PORTAUDIO_PATH", "./portaudio-v19")
 mac_sysroot_path = os.environ.get("SYSROOT_PATH", None)
-crypt_h_path = os.environ.get('CRYPT_H_PATH','.')
 
 pyaudio_module_sources = ['src/_portaudiomodule.c']
 
@@ -114,7 +113,7 @@ if STATIC_LINKING:
         extra_link_args += ['-lasound', '-ljack']
 
     elif sys.platform == 'android':
-        extra_link_args += ['-lm', '-DYYYYYYYYYYYYYYYYY']
+        extra_link_args += ['-lm']
 
 
 pyaudio = Extension('_portaudio',

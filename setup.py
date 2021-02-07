@@ -57,7 +57,7 @@ mac_sysroot_path = os.environ.get("SYSROOT_PATH", None)
 
 pyaudio_module_sources = ['src/_portaudiomodule.c']
 
-include_dirs = [crypt_h_path]
+include_dirs = []
 external_libraries = []
 extra_compile_args = []
 extra_link_args = []
